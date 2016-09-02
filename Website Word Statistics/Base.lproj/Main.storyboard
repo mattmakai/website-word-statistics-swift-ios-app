@@ -1,25 +1,100 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Website_Word_Statistics" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" barStyle="black" text="https://www.fullstackpython.com/" translatesAutoresizingMaskIntoConstraints="NO" id="l58-32-Ykf">
+                                <rect key="frame" x="-4" y="28" width="383" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="MHh-7m-ctH"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" keyboardAppearance="alert" returnKeyType="go"/>
+                            </searchBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWl-9T-OYA">
+                                <rect key="frame" x="-4" y="116" width="383" height="551"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdK-R1-ipq">
+                                <rect key="frame" x="-4" y="72" width="383" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8jN-FX-ddN"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Show Statistics" id="tx3-uB-zh4">
+                                        <color key="tintColor" red="0.91252003209999999" green="0.0085427894680000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="showStatsBtn:" destination="BYZ-38-t0r" id="NW1-Dz-IvO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QC2-yC-5kv"/>
+                                    <barButtonItem title="Back" id="mrI-he-HWZ">
+                                        <color key="tintColor" red="0.91252003209999999" green="0.0085427894680000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="goBack" destination="YWl-9T-OYA" id="2OS-vX-wiB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Reload" id="F0W-Tr-zNx">
+                                        <color key="tintColor" red="0.91252003209999999" green="0.0085427894680000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="reload" destination="YWl-9T-OYA" id="SHX-Q6-w5R"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Stop" id="5XS-F7-u9g">
+                                        <color key="tintColor" red="0.91252003209999999" green="0.0085427894680000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="stopLoading" destination="YWl-9T-OYA" id="EGW-tg-7QC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="IUP-kQ-d3p">
+                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YWl-9T-OYA" firstAttribute="top" secondItem="QdK-R1-ipq" secondAttribute="bottom" id="07F-OG-rNa"/>
+                            <constraint firstItem="QdK-R1-ipq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4Zk-Mg-iyG"/>
+                            <constraint firstItem="YWl-9T-OYA" firstAttribute="top" secondItem="QdK-R1-ipq" secondAttribute="bottom" id="52o-Qa-kuX"/>
+                            <constraint firstItem="YWl-9T-OYA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="99h-wh-i8A"/>
+                            <constraint firstItem="QdK-R1-ipq" firstAttribute="top" secondItem="l58-32-Ykf" secondAttribute="bottom" id="C2N-O9-SLU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l58-32-Ykf" secondAttribute="trailing" constant="-20" id="C4R-9A-p3Z"/>
+                            <constraint firstItem="l58-32-Ykf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="FmT-VT-Wdf"/>
+                            <constraint firstItem="QdK-R1-ipq" firstAttribute="top" secondItem="l58-32-Ykf" secondAttribute="bottom" id="Sav-pk-zVY"/>
+                            <constraint firstItem="YWl-9T-OYA" firstAttribute="top" secondItem="QdK-R1-ipq" secondAttribute="bottom" id="TXC-00-IfI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QdK-R1-ipq" secondAttribute="trailing" constant="-20" id="axm-Jf-fIW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YWl-9T-OYA" secondAttribute="trailing" constant="-20" id="c4D-0d-4Br"/>
+                            <constraint firstItem="l58-32-Ykf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="cZG-wy-WVH"/>
+                            <constraint firstItem="YWl-9T-OYA" firstAttribute="top" secondItem="QdK-R1-ipq" secondAttribute="bottom" id="dMJ-tw-dSX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YWl-9T-OYA" secondAttribute="bottom" id="esS-Wt-dup"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="IUP-kQ-d3p" id="N4H-KY-21f"/>
+                        <outlet property="searchBarInput" destination="l58-32-Ykf" id="qZr-pn-Y7X"/>
+                        <outlet property="webView" destination="YWl-9T-OYA" id="AU2-23-7Rr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="439.5" y="429.5"/>
         </scene>
     </scenes>
 </document>

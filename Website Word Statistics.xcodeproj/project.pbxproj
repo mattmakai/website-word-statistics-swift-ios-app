@@ -11,17 +11,25 @@
 		C991DEB71D79068F00A341DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C991DEB61D79068F00A341DF /* ViewController.swift */; };
 		C991DEBA1D79068F00A341DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C991DEB81D79068F00A341DF /* Main.storyboard */; };
 		C991DEBC1D79068F00A341DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C991DEBB1D79068F00A341DF /* Assets.xcassets */; };
-		C991DEBF1D79068F00A341DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C991DEBD1D79068F00A341DF /* LaunchScreen.storyboard */; };
+		C991DEC71D79090800A341DF /* TextStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = C991DEC61D79090800A341DF /* TextStats.swift */; };
+		C991DEC91D79099400A341DF /* SyllableCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C991DEC81D79099400A341DF /* SyllableCounter.swift */; };
+		C991DECB1D7911AD00A341DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C991DECA1D7911AD00A341DF /* LaunchScreen.storyboard */; };
+		C9A6D61305C5AED38FC990E2 /* Pods_Website_Word_Statistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8BF78EF575618DC93BF5D3 /* Pods_Website_Word_Statistics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F8BF78EF575618DC93BF5D3 /* Pods_Website_Word_Statistics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Website_Word_Statistics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B17B75F6FA66A6D5E37C5A30 /* Pods-Website Word Statistics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Website Word Statistics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Website Word Statistics/Pods-Website Word Statistics.debug.xcconfig"; sourceTree = "<group>"; };
 		C991DEB11D79068F00A341DF /* Website Word Statistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Website Word Statistics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C991DEB41D79068F00A341DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C991DEB61D79068F00A341DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C991DEB91D79068F00A341DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C991DEBB1D79068F00A341DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C991DEBE1D79068F00A341DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C991DEC01D79068F00A341DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C991DEC61D79090800A341DF /* TextStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStats.swift; sourceTree = "<group>"; };
+		C991DEC81D79099400A341DF /* SyllableCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyllableCounter.swift; sourceTree = "<group>"; };
+		C991DECA1D7911AD00A341DF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9EC5AF3C868318CF464FA45 /* Pods-Website Word Statistics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Website Word Statistics.release.xcconfig"; path = "Pods/Target Support Files/Pods-Website Word Statistics/Pods-Website Word Statistics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A6D61305C5AED38FC990E2 /* Pods_Website_Word_Statistics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C3E9B85430CB172ECE9388F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B17B75F6FA66A6D5E37C5A30 /* Pods-Website Word Statistics.debug.xcconfig */,
+				C9EC5AF3C868318CF464FA45 /* Pods-Website Word Statistics.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4EAA7C443F58EC353C2B11FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F8BF78EF575618DC93BF5D3 /* Pods_Website_Word_Statistics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C991DEA81D79068F00A341DF = {
 			isa = PBXGroup;
 			children = (
 				C991DEB31D79068F00A341DF /* Website Word Statistics */,
 				C991DEB21D79068F00A341DF /* Products */,
+				4C3E9B85430CB172ECE9388F /* Pods */,
+				4EAA7C443F58EC353C2B11FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +86,10 @@
 				C991DEB61D79068F00A341DF /* ViewController.swift */,
 				C991DEB81D79068F00A341DF /* Main.storyboard */,
 				C991DEBB1D79068F00A341DF /* Assets.xcassets */,
-				C991DEBD1D79068F00A341DF /* LaunchScreen.storyboard */,
 				C991DEC01D79068F00A341DF /* Info.plist */,
+				C991DEC81D79099400A341DF /* SyllableCounter.swift */,
+				C991DEC61D79090800A341DF /* TextStats.swift */,
+				C991DECA1D7911AD00A341DF /* LaunchScreen.storyboard */,
 			);
 			path = "Website Word Statistics";
 			sourceTree = "<group>";
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C991DEC31D79068F00A341DF /* Build configuration list for PBXNativeTarget "Website Word Statistics" */;
 			buildPhases = (
+				2AD9AD7088F9C0EEB561E9C9 /* Check Pods Manifest.lock */,
 				C991DEAD1D79068F00A341DF /* Sources */,
 				C991DEAE1D79068F00A341DF /* Frameworks */,
 				C991DEAF1D79068F00A341DF /* Resources */,
+				26E73D9C9DD32DB17523A252 /* Embed Pods Frameworks */,
+				4A92A0BB941AE76F9FCE45F9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,7 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C991DEBF1D79068F00A341DF /* LaunchScreen.storyboard in Resources */,
+				C991DECB1D7911AD00A341DF /* LaunchScreen.storyboard in Resources */,
 				C991DEBC1D79068F00A341DF /* Assets.xcassets in Resources */,
 				C991DEBA1D79068F00A341DF /* Main.storyboard in Resources */,
 			);
@@ -130,11 +163,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26E73D9C9DD32DB17523A252 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Website Word Statistics/Pods-Website Word Statistics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AD9AD7088F9C0EEB561E9C9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4A92A0BB941AE76F9FCE45F9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Website Word Statistics/Pods-Website Word Statistics-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C991DEAD1D79068F00A341DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C991DEC91D79099400A341DF /* SyllableCounter.swift in Sources */,
+				C991DEC71D79090800A341DF /* TextStats.swift in Sources */,
 				C991DEB71D79068F00A341DF /* ViewController.swift in Sources */,
 				C991DEB51D79068F00A341DF /* AppDelegate.swift in Sources */,
 			);
@@ -149,14 +232,6 @@
 				C991DEB91D79068F00A341DF /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C991DEBD1D79068F00A341DF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C991DEBE1D79068F00A341DF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -249,6 +324,7 @@
 		};
 		C991DEC41D79068F00A341DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B17B75F6FA66A6D5E37C5A30 /* Pods-Website Word Statistics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Website Word Statistics/Info.plist";
@@ -260,6 +336,7 @@
 		};
 		C991DEC51D79068F00A341DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9EC5AF3C868318CF464FA45 /* Pods-Website Word Statistics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Website Word Statistics/Info.plist";
@@ -288,6 +365,7 @@
 				C991DEC51D79068F00A341DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
