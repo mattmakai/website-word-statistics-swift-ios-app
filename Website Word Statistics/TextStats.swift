@@ -17,7 +17,10 @@ struct TextStatistics {
   var h2ElementCount = Int(0)
   
   func statisticsMessage() -> String {
-    return "\nWord and element statistics for this webpage.\n\nCharacters: \(charCount)\nWords: \(wordCount)\nSyllables: \(wordCount)\n\n<p> elements: \(pElementCount)\n<h1> elements: \(h1ElementCount)\n<h2> elements: \(h2ElementCount)\n"
+    if (charCount == 0 && wordCount == 0 && syllableCount == 0 && pElementCount == 0 && h1ElementCount == 0 && h2ElementCount == 0) {
+      return "Unable to gather word statistics for this URL, please try another one!"
+    }
+    return "\nStatistics for this webpage - only counts within <p>, <h1> and <h2> elements.\n\nCharacters: \(charCount)\nWords: \(wordCount)\nSyllables: \(wordCount)\n\n<p> elements: \(pElementCount)\n<h1> elements: \(h1ElementCount)\n<h2> elements: \(h2ElementCount)\n"
   }
   
   mutating func resetStatistics() {

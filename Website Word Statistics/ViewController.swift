@@ -103,7 +103,11 @@ class ViewController: UIViewController, UISearchBarDelegate, UIWebViewDelegate {
   // Grabs the HTML from current website for parsing.
   func scrapePage(currentUrl: String) -> Void {
     Alamofire.request(.GET, currentUrl).responseString { response in
-      self.parseHTML(response.result.value!)
+      guard let parseURL = response.result.value else {
+        return
+      }
+      self.pageStats.resetStatistics()
+      self.parseHTML(parseURL)
     }
   }
   
